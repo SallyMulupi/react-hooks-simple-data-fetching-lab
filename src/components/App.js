@@ -1,10 +1,12 @@
 // create your App component here
-import React, { useEffect, useState } from "react"
-function App() {
-    const [image, setImage] = useState("")
-    const [load, setLoad] = useState(false)
+import React, {useEffect, useState} from "react"
 
-    useEffect(() => {
+function App (){
+ const [image, setImage] = useState("")
+ const [load, setLoad] = useState(false)
+
+    useEffect(() =>{
+
         fetch(" https://dog.ceo/api/breeds/image/random")
         .then(response => response.json())
         .then(data =>{
@@ -23,3 +25,4 @@ function App() {
 }
 
 export default App
+
